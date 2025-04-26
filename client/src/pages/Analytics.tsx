@@ -8,6 +8,7 @@ import AnalyticsChart from "@/components/AnalyticsChart";
 import { getBrowsingHistory, getWebsiteStatistics, getCategoryStatistics, formatTimeSpent } from "@/lib/analytics";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 export default function Analytics() {
   const [websiteStats, setWebsiteStats] = useState<any[]>([]);
@@ -55,6 +56,7 @@ export default function Analytics() {
             </Link>
             <CardTitle className="text-xl font-bold">Productivity Analytics</CardTitle>
           </div>
+          <ThemeToggle />
         </CardHeader>
         <CardContent>
           <CardDescription className="mb-4">
