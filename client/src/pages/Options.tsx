@@ -8,6 +8,7 @@ import SettingsForm from "@/components/SettingsForm";
 import BlockedSites from "@/components/BlockedSites";
 import { getStorageItem } from "@/lib/chromeStorage";
 import { type StorageItems } from "@/lib/chromeStorage";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 export default function Options() {
   const [settings, setSettings] = useState<StorageItems["settings"] | null>(null);
@@ -40,6 +41,7 @@ export default function Options() {
             </Link>
             <CardTitle className="text-xl font-bold">Settings</CardTitle>
           </div>
+          <ThemeToggle />
         </CardHeader>
         <CardContent>
           <CardDescription className="mb-4">

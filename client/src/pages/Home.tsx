@@ -8,6 +8,7 @@ import PomodoroTimer from "@/components/PomodoroTimer";
 import BlockedSites from "@/components/BlockedSites";
 import { pomodoroTimer, type TimerInfo } from "@/lib/pomodoroTimer";
 import { useToast } from "@/hooks/use-toast";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 export default function Home() {
   const [timerInfo, setTimerInfo] = useState<TimerInfo | null>(null);
@@ -36,6 +37,7 @@ export default function Home() {
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
           <CardTitle className="text-xl font-bold">Focus Booster</CardTitle>
           <div className="flex gap-2">
+            <ThemeToggle />
             <Link href="/analytics">
               <Button variant="outline" size="icon" title="Analytics">
                 <BarChart className="h-4 w-4" />
